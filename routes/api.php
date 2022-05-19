@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\api\BasisPengetahuanController;
+use App\Http\Controllers\api\GejalaController;
+use App\Http\Controllers\api\PenyakitController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/penyakit', [PenyakitController::class, 'index']);
+Route::get('/gejala', [GejalaController::class, 'index']);
+Route::get('/basis', [BasisPengetahuanController::class, 'index']);
