@@ -112,8 +112,8 @@
     <script src="{{ asset('assets/vendors/simple-datatables/simple-datatables.js') }}"></script>
     <script>
         // Simple Datatable
-        let table1 = document.querySelector('#table1');
-        let dataTable = new simpleDatatables.DataTable(table1);
+        // let table1 = document.querySelector('#table1');
+        // let dataTable = new simpleDatatables.DataTable(table1);
     </script>
     <script type="text/javascript">
         $(function() {
@@ -121,6 +121,7 @@
 
             $('.delete').click(function() {
                 var data = $(this).attr('data-id');
+                console.log(data);
                 swal({
                         title: "Anda yakin?",
                         text: "Anda akan menghapus data ini!",
