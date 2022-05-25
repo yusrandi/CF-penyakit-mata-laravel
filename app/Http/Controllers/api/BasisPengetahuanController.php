@@ -10,7 +10,7 @@ class BasisPengetahuanController extends Controller
 {
     public function index()
     {
-        $data = Basispengetahuan::orderby('penyakit_id')->get();
+        $data = Basispengetahuan::with('gejala')->orderby('penyakit_id')->get();
         return response()->json([
             'responsecode' => '1',
             'responsemsg' => 'Success!',

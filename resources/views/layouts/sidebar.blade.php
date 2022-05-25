@@ -21,13 +21,7 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <li class="sidebar-item  {{ request()->routeIs('welcome') ? 'active' : '' }}">
-                    <a href="{{ route('welcome') }}" class='sidebar-link'>
-                        <i class="bi bi-grid-fill"></i>
-                        <span>Welcome</span>
-                    </a>
-                </li>
-
+               
 
                 <li class="sidebar-title">Tabel Master</li>
 
@@ -55,8 +49,19 @@
                         <span>Basis Pengetahuan</span>
                     </a>
                 </li>
-
-
+                <li class="sidebar-item  {{ request()->routeIs('laporan') ? 'active' : '' }}">
+                    <a href="{{ route('laporan.index') }}" class='sidebar-link'>
+                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                        <span>Laporan</span>
+                    </a>
+                </li>
+                <li class="sidebar-item  {{ request()->routeIs('user') ? 'active' : '' }}">
+                    <a href="{{ route('user.index') }}" class='sidebar-link'>
+                        <i class="bi bi-person-badge-fill"></i>
+                        <span>Data Pengguna</span>
+                    </a>
+                </li>
+               
             </ul>
         </div>
         <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
