@@ -45,6 +45,13 @@
                     </div>
                 </div>
                 <div class="form-group mb-3">
+                    <label for="basicInput">Email</label>
+                    <div class="form-group position-relative has-icon-right">
+                        <input type="email" class="form-control" placeholder="test@test.test" required
+                            name="email">
+                    </div>
+                </div>
+                <div class="form-group mb-3">
                     <label for="basicInput">Password</label>
                     <div class="form-group position-relative has-icon-right">
                         <input type="password" class="form-control" placeholder="min 8 Karakter" required minlength="8"

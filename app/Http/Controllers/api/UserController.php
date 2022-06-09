@@ -24,9 +24,9 @@ class UserController extends Controller
         // return $request;
         $hasher = app()->make('hash');
         $password = $request->password;
-        $phone = $request->phone;
+        $email = $request->email;
 
-        $login = User::where('phone', $phone)
+        $login = User::where('email', $email)
             // ->where('hak_akses', '!=', 1)
             // ->orwhere('hak_akses', 3)
             ->first();
@@ -37,12 +37,11 @@ class UserController extends Controller
 
             return response()->json([
                 'responsecode' => '0',
-                'responsemsg' => 'Maaf Nomor anda tidak terdaftar',
+                'responsemsg' => 'Maaf Email anda tidak terdaftar',
 
             ], 201);
         } else {
             if ($hasher->check($password, $login->password)) {
-
 
 
                 $update = $login->update([
@@ -71,5 +70,14 @@ class UserController extends Controller
                 ], 201);
             }
         }
+    }
+
+    public function alluser()
+    {
+        return response()->json([
+            'responsecode' => '1',
+            'responsemsg' => 'Success',
+            'data' => User::all(),
+        ], 201);
     }
 }
