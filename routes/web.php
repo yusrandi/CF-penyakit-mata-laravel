@@ -4,6 +4,7 @@ use App\Http\Controllers\BasisPengetahuanController;
 use App\Http\Controllers\GejalaController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\PenyakitController;
+use App\Http\Controllers\RuleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -43,4 +44,5 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('user', UserController::class)->except('create', 'show');
     Route::get('user/delete/{user}', [UserController::class, 'destroy']);
+    Route::get('rule', [RuleController::class, 'index'])->name('rule.index');
 });

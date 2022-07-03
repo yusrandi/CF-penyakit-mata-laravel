@@ -19,7 +19,9 @@ class User extends Authenticatable
         'password',
         'address',
         'phone',
-        'role_id'
+        'role_id',
+        'lahir',
+        'pekerjaan'
     ];
 
     /**

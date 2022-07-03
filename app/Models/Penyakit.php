@@ -14,4 +14,9 @@ class Penyakit extends Model
     {
         return $this->hasMany(Basispengetahuan::class);
     }
+
+    public function gejalas()
+    {
+        return $this->belongsToMany(Gejala::class, 'basispengetahuans', 'penyakit_id', 'gejala_id');
+    }
 }

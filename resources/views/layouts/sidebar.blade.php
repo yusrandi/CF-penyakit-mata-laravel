@@ -49,6 +49,12 @@
                         <span>Basis Pengetahuan</span>
                     </a>
                 </li>
+                <li class="sidebar-item  {{ request()->routeIs('rule') ? 'active' : '' }}">
+                    <a href="{{ route('rule.index') }}" class='sidebar-link'>
+                        <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                        <span>Rule</span>
+                    </a>
+                </li>
                 <li class="sidebar-item  {{ request()->routeIs('laporan') ? 'active' : '' }}">
                     <a href="{{ route('laporan.index') }}" class='sidebar-link'>
                         <i class="bi bi-file-earmark-spreadsheet-fill"></i>
