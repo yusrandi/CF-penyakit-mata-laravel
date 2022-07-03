@@ -30,7 +30,7 @@ class UserController extends Controller
 
         $login = User::where('email', $email)
             // ->where('hak_akses', '!=', 1)
-            // ->orwhere('hak_akses', 3)
+            ->where('role_id', 3)
             ->first();
 
 
