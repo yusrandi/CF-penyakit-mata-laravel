@@ -8,9 +8,11 @@ use Illuminate\Http\Request;
 
 class LaporanController extends Controller
 {
-    public function index()
+    public function index($id)
     {
-        $data = Laporan::with(['penyakit', 'user'])->latest()->get();
+        $data = Laporan::with(['penyakit', 'user'])
+            ->where('user_id', $id)
+            ->latest()->get();
 
         return response()->json([
             'responsecode' => '1',

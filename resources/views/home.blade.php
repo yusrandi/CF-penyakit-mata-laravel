@@ -1,4 +1,7 @@
 @extends('layouts.app')
+@section('css')
+
+@endsection
 @section('content')
     <div class="page-heading">
         <div class="page-title">
@@ -29,9 +32,7 @@
                         </div>
 
                         <div class="card-body">
-                            <div class="row">
-                                
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
